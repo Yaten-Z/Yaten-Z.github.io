@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/posts/0/"/>
+      <url>/posts/0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="cloudns-免费注册-cloudflare-托管教程"><a class="markdownIt-Anchor" href="#cloudns-免费注册-cloudflare-托管教程"></a> CloudNS 免费注册 &amp; Cloudflare 托管教程</h1><h2 id="一-cloudns-免费注册"><a class="markdownIt-Anchor" href="#一-cloudns-免费注册"></a> 一、CloudNS 免费注册</h2><h3 id="一访问官网"><a class="markdownIt-Anchor" href="#一访问官网"></a> （一）访问官网</h3><p>打开 CloudNS 官网：<a href="https://www.cloudns.net/">CloudNS 官网</a>。</p><h3 id="二注册账号"><a class="markdownIt-Anchor" href="#二注册账号"></a> （二）注册账号</h3><p>点击 “Sign up new account” 进行注册，输入邮箱、密码等信息。</p><h3 id="三创建免费区域"><a class="markdownIt-Anchor" href="#三创建免费区域"></a> （三）创建免费区域</h3><ol><li>登录后，进入 “DNS 托管”，点击 “创建区域”，选择 “免费区域”。</li><li>输入自定义域名（不要勾选 activate dynamic DNS），点击 “创建”。</li><li>若提示 “由于您当前 IP 网络的高滥用率，免费域名的创建受到限制…”，可更换 IP 或切换网络（你懂的）。</li></ol><h2 id="二-cloudflare-托管"><a class="markdownIt-Anchor" href="#二-cloudflare-托管"></a> 二、Cloudflare 托管</h2><h3 id="一注册-cloudflare-账号"><a class="markdownIt-Anchor" href="#一注册-cloudflare-账号"></a> （一）注册 Cloudflare 账号</h3><ol><li>访问 Cloudflare 官网：<a href="https://www.cloudflare.com/zh-cn/">Cloudflare 官网</a>。</li><li>输入邮箱、密码，邮箱国内外均可，密码需满足一定条件。</li><li>在注册绑定的邮箱中收到邮件，点击链接激活账号。</li></ol><h3 id="二添加站点"><a class="markdownIt-Anchor" href="#二添加站点"></a> （二）添加站点</h3><ol><li>登录 Cloudflare，点击 “主页” → “添加域”。</li><li>输入 CloudNS 申请的域名，选择 “Free” 免费计划，点击 “继续”。</li><li>Cloudflare 会自动扫描已有的 DNS 记录，若有原 CloudNS 的 DNS 记录，删除后点击 “继续前往激活”。</li></ol><h3 id="三更改-dns-服务器"><a class="markdownIt-Anchor" href="#三更改-dns-服务器"></a> （三）更改 DNS 服务器</h3><ol><li>在 CloudNS 中，删除所有原有 NS 记录。</li><li>添加 Cloudflare 提供的 NS 记录，主机留空，指向 Cloudflare 提供的两条 NS 服务器地址。</li><li>回到 Cloudflare，点击 “继续”，页面跳转后，拉到最下面，点击 “立即检查名称服务器”，通常 10 分钟左右，域名状态变更为 “活动”，托管成功。</li></ol><h2 id="三-双向解析优化方案可选"><a class="markdownIt-Anchor" href="#三-双向解析优化方案可选"></a> 三、双向解析优化方案（可选）</h2><h3 id="一在-cloudflare-添加-a-记录"><a class="markdownIt-Anchor" href="#一在-cloudflare-添加-a-记录"></a> （一）在 Cloudflare 添加 A 记录</h3><ol><li>进入 Cloudflare → “DNS”，添加 A 记录，IP 可随意，记录类型为 A，名称如 <code>abc</code>，IPv4 地址可填 <code>8.8.8.8</code>。</li></ol><h3 id="二在-cloudns-添加-cloudflare-的-ns-记录"><a class="markdownIt-Anchor" href="#二在-cloudns-添加-cloudflare-的-ns-记录"></a> （二）在 CloudNS 添加 Cloudflare 的 NS 记录</h3><ol><li>回到 CloudNS，添加两条 NS 记录，主机填写 A 记录的名称（如 <code>abc</code>），指向 Cloudflare 服务器地址（共两条记录）。</li><li>在 CloudNS 添加 CNAME 记录，主机为 <code>*</code>，指向 A 记录的域名（如 <code>abc.cloudns.com</code>）。</li></ol><h2 id="四-ssl-证书优化可选"><a class="markdownIt-Anchor" href="#四-ssl-证书优化可选"></a> 四、SSL 证书优化（可选）</h2><ol><li>在 Cloudflare → “SSL/TLS” → “边缘证书”，复制证书验证的 TXT 记录。</li><li>回到 CloudNS，添加 TXT 记录，名称为 <code>_acme-challenge</code>，值为 Cloudflare 提供的证书值。</li><li>等待 CloudNS 更新，Cloudflare 识别证书，通常 30 分钟内证书生效。</li><li>理论上隔一段时间要再来进行一次 SSL</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>斐波那契数列的通项公式</title>
       <link href="/posts/10453/"/>
       <url>/posts/10453/</url>
