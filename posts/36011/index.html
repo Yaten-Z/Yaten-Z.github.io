@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.yaten.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.yaten.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="用对角化法推导斐波那契数列通项公式 斐波那契数列定义如下： F0&#x3D;0,F1&#x3D;1,Fn&#x3D;Fn−1+Fn−2(n≥2)F_0 &#x3D; 0,\quad F_1 &#x3D; 1,\quad F_n &#x3D; F_{n-1} + F_{n-2} \quad (n \geq 2) F0​&#x3D;0,F1​&#x3D;1,Fn​&#x3D;Fn−1​+Fn−2​(n≥2)   一、构造递推矩阵 将递推公式写为矩阵形式： [FnFn−1]&#x3D;[1110][">
 <meta property="og:type" content="article">
@@ -252,6 +252,20 @@
         </span>
     </span>
 
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Valine：</span>
+  
+    <a title="valine" href="/posts/36011/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/36011/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 </div>
 
@@ -597,27 +611,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 
 
 
-    
-  
-  <div class="comments">
-    <script src="https://giscus.app/client.js"
-        data-repo="Yaten-Z/blog-giscus" 
-        data-repo-id="R_kgDOOzg2eg" 
-        data-category="null"
-        data-category-id="DIC_kwDOOzg2es4Cq1Mo"
-        data-mapping="pathname" 
-        data-reactions-enabled="1" 
-        data-emit-metadata="1" 
-        data-theme="dark"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        data-input-position="bottom"
-        data-loading="lazy"
-        async>
-    </script>
-  </div>
-  
-  
+    <div class="comments" id="valine-comments"></div>
 </div>
   </main>
 
@@ -655,6 +649,19 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"LT7cxXNuwgIoumUNEdt1A3Lw-MdYXbMMI","appKey":"tTlZWJeiSYenFGEHGMzsyj12","serverURLs":"https://lt7cxxnu.api.lncldglobal.com","placeholder":"写些想说的话吧···","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":[],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.3/Valine.min.js","el":"#valine-comments","path":"/posts/36011/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.valine.el)
+    .then(() => NexT.utils.getScript(
+      CONFIG.valine.libUrl,
+      { condition: window.Valine }
+    ))
+    .then(() => {
+      new Valine(CONFIG.valine);
+    });
+});
+</script>
 
 
         <style>
