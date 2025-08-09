@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yaten.xyz/posts/30880/</loc>
+    
+    <lastmod>2025-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.yaten.xyz/collect/index.html</loc>
     
     <lastmod>2025-08-08</lastmod>
@@ -187,6 +196,20 @@
   </url>
   
   <url>
+    <loc>http://blog.yaten.xyz/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yaten.xyz/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2025-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.yaten.xyz/tags/%E6%95%B0%E8%AE%BA/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -209,20 +232,6 @@
   
   <url>
     <loc>http://blog.yaten.xyz/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.yaten.xyz/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.yaten.xyz/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
