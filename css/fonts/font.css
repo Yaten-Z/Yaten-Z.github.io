@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'SourceHanSerif_Bold';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Bold.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_ExtraLight';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-ExtraLight.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_Heavy';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Heavy.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_Light';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Light.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_Medium';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Medium.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_Regular';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Regular.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'SourceHanSerif_Semibold';
+    font-display: swap;
+    src: url('SiYuan/SourceHanSerif-Semibold.ttc') format('truetype');
+}
