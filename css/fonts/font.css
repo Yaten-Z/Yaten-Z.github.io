@@ -1,41 +1,50 @@
 @font-face {
-    font-family: 'SourceHanSerif_Bold';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Bold.ttc') format('truetype');
+    src: url('font/SourceHanSans-Bold.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_ExtraLight';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-ExtraLight.ttc') format('truetype');
+    src: url('font/SourceHanSans-ExtraLight.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_Heavy';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Heavy.ttc') format('truetype');
+    src: url('font/SourceHanSans-Heavy.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_Light';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Light.ttc') format('truetype');
+    src: url('font/SourceHanSans-Light.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_Medium';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Medium.ttc') format('truetype');
+    src: url('font/SourceHanSans-Medium.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_Regular';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Regular.ttc') format('truetype');
+    src: url('font/SourceHanSans-Regular.ttc') format('truetype');
 }
 
 @font-face {
-    font-family: 'SourceHanSerif_Semibold';
+    font-family: 'SourceHanSans';
     font-display: swap;
-    src: url('SiYuan/SourceHanSerif-Semibold.ttc') format('truetype');
+    src: url('font/SourceHanSans-Semibold.ttc') format('truetype');
+}
+
+@font-face{
+    font-family: 'JetBrains Mono';
+    font-display: swap;
+    src: url('font/JetBrainsMono-Regular.ttf') format("truetype");
+}
+body {
+    font-family: 'JetBrains Mono','SourceHanSans';
 }
