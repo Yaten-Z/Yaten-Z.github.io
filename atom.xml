@@ -6,7 +6,7 @@
   <link href="http://blog.yaten.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.yaten.xyz/"/>
-  <updated>2025-09-06T15:02:27.990Z</updated>
+  <updated>2025-09-23T04:01:42.241Z</updated>
   <id>http://blog.yaten.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo Butterfly 搭建博客 - 1</title>
+    <link href="http://blog.yaten.xyz/p/32912/"/>
+    <id>http://blog.yaten.xyz/p/32912/</id>
+    <published>2025-09-22T14:05:02.000Z</published>
+    <updated>2025-09-23T04:01:42.241Z</updated>
+    
+    <content type="html"><![CDATA[<h1>前言</h1><p>一直想拥有一个属于自己的小天地，能记录一些日常的思考、学习的点滴，或者单纯分享一些喜欢的东西。相比于喧嚣的社交平台，一个简洁而自由的个人博客似乎更适合。</p><p>在各种方案中，我选择了 Hexo —— 一个基于 Node.js 的静态博客框架，轻量、高效，部署方便。而在 Hexo 的众多主题里，Butterfly 则凭借着优雅的设计、强大的功能和高度可定制性，让我一眼就决定用它来搭建我的博客。</p><p>为了避免以后自己忘记步骤，也为了能给正在折腾的朋友一些参考，我决定把整个搭建过程记录成系列文章。主要会涵盖：</p><ul><li><p>环境准备与 Hexo 的安装</p></li><li><p>Butterfly 主题的下载和基础配置</p></li><li><p>个性化美化和主题优化</p></li><li><p>More</p></li></ul><p>希望这份记录不仅能帮到想要入门 Hexo 的人，也能成为我自己在折腾路上的一份“存档”。</p><h1>准备工作</h1><h2 id="Git">Git</h2><p>打开 <a href="https://git-scm.com/downloads/win">Git 官网</a> 下载对应版本的 Git 安装包并安装。</p><p>安装完成后检查 Git 版本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><p>如果 Git 版本没有正常输出，检查环境变量里面是否加入 Git</p><p><strong>从此开始，没有特殊说明，默认终端执行命令是使用Git Bash（右键有显示）</strong></p><h2 id="GitHub">GitHub</h2><h3 id="注册GitHub">注册GitHub</h3><p>有手就行，没手用脚</p><h3 id="新建仓库">新建仓库</h3><p>打开 GitHub 官网，点击<a href="https://github.com/new">新建仓库</a>。Repository name 写：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Your GitHub Name].github.io</span><br></pre></td></tr></table></figure><p>例如我就是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yaten-Z.github.io</span><br></pre></td></tr></table></figure><p>Choose visibility 确认是 Public 而不是 Private</p><p>点击 Create repository</p><h3 id="连接-GitHub-与本地">连接 GitHub 与本地</h3><p>打开终端执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Github Name&quot;</span><br><span class="line">git config --global user.email &quot;Your Github emali&quot;</span><br></pre></td></tr></table></figure><p>用户名和邮箱根据你注册 GitHub 的信息自行修改。</p><p><strong>其中双引号不能少！！！</strong></p><p>然后生成密钥 SSH key：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;Your Github emali&quot;</span><br></pre></td></tr></table></figure><p>打开文件夹，找到 <code>C:\Users\[Your Name]\.ssh</code></p><p>打开文件 <code>id_rsa.pub</code></p><p>打开 <a href="https://github.com">github</a>，在头像下面点击settings，再点击 SSH and GPG keys，新建一个 SSH，名字随便。</p><p>把文件 <code>id_rsa.pub</code> 文件里的内容全部复制到 GitHub 上 SSH 的框内并保存</p><p>这时再打开终端，执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>如果像我一样出现：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hi Yaten-Z! </span><br><span class="line">You&#x27;ve successfully authenticated, </span><br><span class="line">but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure><p>说明你已经成功连接 GitHub 与本地</p><h2 id="Node-js">Node.js</h2><p>打开 <a href="https://git-scm.com/downloads/win">Node.js 官网</a> 下载对应版本的 Node.js 安装包并安装。</p><p>安装完成后检查 Node.js 版本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure><p>如果 Node.js 版本没有正常输出，检查环境变量里面是否加入 Node.js</p><h2 id="bun">bun</h2><p>如果你对 npm 有把握，可以跳过这一步，不过记得后面的命令 bun 都要改成 npm.</p><p>为什么要使用 bun？</p><p><img src="https://s1.imagehub.cc/images/2025/09/23/5d8a832e1c3df72c84c2a55415859670.png" alt="npm cnm"></p><p>在等了 114514 年的情况下，我寻求大佬的帮助，给出的建议是：</p><p><img src="https://s1.imagehub.cc/images/2025/09/23/cb3fde7dc751222ae476ce0719e09494.png" alt="change bun"></p><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g bun</span><br></pre></td></tr></table></figure><p>安装完成后检查 bun 版本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun --version</span><br></pre></td></tr></table></figure><p>如果 Node.js 版本没有正常输出，检查 npm 是不是又在作怪。</p><h1>搭建 Hexo</h1><h2 id="全局安装-Hexo">全局安装 Hexo</h2><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun install hexo -g</span><br></pre></td></tr></table></figure><h2 id="初始化-Hexo">初始化 Hexo</h2><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [Your Blog Name]</span><br></pre></td></tr></table></figure><h2 id="安装所需依赖">安装所需依赖</h2><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun install</span><br></pre></td></tr></table></figure><h2 id="预览-Hexo">预览 Hexo</h2><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><p>解释一下什么意思：</p><ul><li><p>清理已经生成的 public 文件夹：<code>hexo cl</code> = <code>hexo clean</code></p></li><li><p>生成页面放入 public 文件夹：<code>hexo g</code> = <code>hexo generate</code></p></li><li><p>本地预览 Hexo：<code>hexo s</code> = <code>hexo serve</code></p></li></ul><p>此时打开浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a></p><p>如果有网页，说明你已经完成的 Hexo 的初始化</p><p>在终端按 <code>ctrl</code>+<code>c</code> 停止预览</p><h2 id="把-Hexo-部署到-GitHub">把 Hexo 部署到 GitHub</h2><p>安装插件 <code>hexo-deployer-git</code></p><p>执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun install hexo-deployer-git</span><br></pre></td></tr></table></figure><p>打开 <code>_config.yml</code>，拖到最后面补充：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:[Your Github Name]/[Your Github Name].github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p>例如我是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Yaten-Z/Yaten-Z.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p>再打开终端，执行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>其中 <code>hexo d</code> =<code>hexo deploy</code>，部署网站。</p><p>待到执行完毕后，过一段时间打开 <code>https://[Your Github Name].github.io</code>，会发现你的 Blog 已经部署上去了。</p>]]></content>
+    
+    
+    <summary type="html">使用快速、简洁且高效的博客框架 Hexo 初始化博客</summary>
+    
+    
+    
+    <category term="博客相关" scheme="http://blog.yaten.xyz/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"/>
+    
+    
+    <category term="Hexo" scheme="http://blog.yaten.xyz/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>你们像天外来物一样-TATEN</title>
@@ -83,13 +104,13 @@
     
     <category term="算法" scheme="http://blog.yaten.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
+    <category term="数学" scheme="http://blog.yaten.xyz/tags/%E6%95%B0%E5%AD%A6/"/>
+    
     <category term="数论" scheme="http://blog.yaten.xyz/tags/%E6%95%B0%E8%AE%BA/"/>
     
     <category term="中国剩余定理" scheme="http://blog.yaten.xyz/tags/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/"/>
     
     <category term="CRT" scheme="http://blog.yaten.xyz/tags/CRT/"/>
-    
-    <category term="数学" scheme="http://blog.yaten.xyz/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
