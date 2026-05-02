@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Yaten-Z&#39;s Blog</title>
+    <link>https://blog.yaten.xyz/posts/</link>
+    <description>Recent content in Posts on Yaten-Z&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 May 2026 22:52:30 +0800</lastBuildDate>
+    <atom:link href="https://blog.yaten.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>失眠的夜</title>
+      <link>https://blog.yaten.xyz/posts/sleepless-night/</link>
+      <pubDate>Sat, 02 May 2026 22:52:30 +0800</pubDate>
+      <guid>https://blog.yaten.xyz/posts/sleepless-night/</guid>
+      <description>2025-06-29 失眠的夜晚，或许就这样吧</description>
+    </item>
+    <item>
+      <title>Question Record 01</title>
+      <link>https://blog.yaten.xyz/posts/question-record-01/</link>
+      <pubDate>Thu, 30 Apr 2026 18:44:14 +0800</pubDate>
+      <guid>https://blog.yaten.xyz/posts/question-record-01/</guid>
+      <description>运用余弦定理巧画费马点</description>
+    </item>
+    <item>
+      <title>Excellent Questions 01</title>
+      <link>https://blog.yaten.xyz/posts/excellent-questions-01/</link>
+      <pubDate>Sun, 05 Apr 2026 23:56:00 +0800</pubDate>
+      <guid>https://blog.yaten.xyz/posts/excellent-questions-01/</guid>
+      <description>注意力比较惊人的不等式</description>
+    </item>
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>https://blog.yaten.xyz/posts/test-blog/</link>
+      <pubDate>Sat, 04 Apr 2026 20:00:00 +0800</pubDate>
+      <guid>https://blog.yaten.xyz/posts/test-blog/</guid>
+      <description>这是我的第一篇测试笔记</description>
+    </item>
+  </channel>
+</rss>

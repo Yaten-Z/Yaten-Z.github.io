@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="light">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Excellent Questions 01 | Yaten-Z&#39;s Blog</title>
+<meta name="keywords" content="数学">
+<meta name="description" content="注意力比较惊人的不等式">
+<meta name="author" content="Yaten-Z">
+<link rel="canonical" href="https://blog.yaten.xyz/posts/excellent-questions-01/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4f4ee402f08b2f1efccbf1cda3e7a1a56083c4e190a995230f363c228f9bc26c.css" integrity="" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.yaten.xyz/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.yaten.xyz/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.yaten.xyz/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.yaten.xyz/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.yaten.xyz/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://blog.yaten.xyz/posts/excellent-questions-01/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.44/dist/katex.min.css" integrity="sha384-irXK0JiCGinqGL+slwVklbhJetrjczNwaP2lANewD8lKAs9n61SbQ3As28iSqXUE" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.44/dist/katex.min.js" integrity="sha384-m/s9umSlhJbqEdA/j7pQVdGCMx2fHf7GXtgCVhNGOwLuu+1qJQES5AzIE8pn3nKQ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.44/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+<meta property="og:url" content="https://blog.yaten.xyz/posts/excellent-questions-01/">
+  <meta property="og:site_name" content="Yaten-Z&#39;s Blog">
+  <meta property="og:title" content="Excellent Questions 01">
+  <meta property="og:description" content="注意力比较惊人的不等式">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-05T23:56:00+08:00">
+    <meta property="article:modified_time" content="2026-04-05T23:56:00+08:00">
+    <meta property="article:tag" content="数学">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Excellent Questions 01">
+  <meta name="twitter:description" content="注意力比较惊人的不等式">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.yaten.xyz/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Excellent Questions 01",
+      "item": "https://blog.yaten.xyz/posts/excellent-questions-01/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Excellent Questions 01",
+  "name": "Excellent Questions 01",
+  "description": "注意力比较惊人的不等式",
+  "keywords": [
+    "数学"
+  ],
+  "articleBody": "题目叙述 已知对于任意正整数 $n$ 和任意实数 $x_1,x_2,...,x_n$，不等式 $$\r(1-\\sum^{n}_{k=1}\\frac{\\sin x_k}{k(k+1)})^2+(1-\\sum^{n}_{k=1}\\frac{\\cos x_k}{k(k+1)})^2 \\ge \\frac{c}{(n+1)\\sqrt{n+1}}\r$$恒成立。求常数 $c$ 的最大可能值。\n解答 对于 $\\forall u,v \\in \\R$，基本不等式 得 $$\ru^2+v^2 \\ge \\frac{(u+v)^2}{2}\r$$ 令 $$\ru = 1-\\sum^{n}_{k=1}\\frac{\\sin x_k}{k(k+1)}, v = 1-\\sum^{n}_{k=1}\\frac{\\cos x_k}{k(k+1)}\r$$ 则左边 $$\r\\text{LHS} = u^2+v^2 \\ge \\frac{(u+v)^2}{2} = \\frac{1}{2}(2-\\sum^{n}_{k=1}\\frac{\\sin x_k+\\cos x_k}{k(k+1)})^2\r$$ 而由于 $\\sin x_k + \\cos x_k = \\sqrt{2}\\sin(x_k + \\frac{\\pi}{4}) \\le \\sqrt{2}$，因此 $$\r\\sum ^{n}_{k=1}\\frac{\\sin x_k+\\cos x_k}{k(k+1)} \\le \\sqrt{2}\\sum^{n}_{k=1}\\frac{1}{k(k+1)} = \\sqrt{2}(1-\\frac{1}{n+1}) = \\frac{\\sqrt{2}n}{n+1}\r$$ 所以 $$\r\\text{LHS} \\ge \\frac{1}{2}(2-\\frac{\\sqrt{2}n}{n+1})^2\r$$ 当且仅当 $\\sin x_k + \\cos x_k = \\sqrt{2}$，即 $x_k = \\frac{\\pi}{4} + 2m\\pi$（$m \\in \\Z$）时等号成立。此时 $$\r\\text{LHS}_{\\min} = \\frac{1}{2}(2-\\frac{\\sqrt{2}n}{n+1})^2 = (\\sqrt{2}-\\frac{n}{n+1})^2\r$$ 所以 $\\forall n \\in \\N^+$，恒有 $$\r(\\sqrt{2}-\\frac{n}{n+1})^2 \\ge \\frac{c}{(n+1)\\sqrt{n+1}}\r$$ 参变分离可以得到 $$\rc \\le (n+1)\\sqrt{n+1}(\\sqrt{2}-\\frac{n}{n+1})^2 = \\frac{(\\sqrt{2}(n+1)-n)^2}{\\sqrt{n+1}}\r$$ 令 $f(x) = \\frac{(\\sqrt{2}(x+1)-x)^2}{\\sqrt{x+1}}$，则 $$\rc_{\\max} = \\min_{n \\in \\N^+} f(n)\r$$ 换元，令 $t = \\sqrt{x+1} \\in (1,+\\infty)$，则 $x = t^2 - 1$，所以 $$\rf(x) = g(t) = \\frac{(\\sqrt{2}t - (t^2 - 1))^2}{t} = \\frac{(\\sqrt{2}t - t^2 + 1)^2}{t}\r$$ 求导化简得到 $$\rg'(t) = \\frac{3t^4-4\\sqrt{2}t^3+4t^2-1}{t^2}\r$$ 令 $h(t) = 3t^4 - 4\\sqrt{2}t^3 + 4t^2 - 1$，则 $$\rh'(t) = 12t^3 - 12\\sqrt{2}t^2 + 8t = 4t(3t^2 - 3\\sqrt{2}t + 2)\r$$ 对于 $3t^2 - 3\\sqrt{2}t + 2$，其判别式 $\\Delta = (-3\\sqrt{2})^2 - 4 \\cdot 3 \\cdot 2 = 18 - 24 = -6 \u003c 0$。 所以 $3t^2 - 3\\sqrt{2}t + 2 \u003e 0$ 对 $\\forall t \\in \\R$ 成立。\n所以 $h'(t) \u003e 0$ 对 $\\forall t \\in (1,+\\infty)$ 成立。从而 $h(t)$ 在 $(1,+\\infty)$ 上单调递增。又因为 $h(1) = 3 - 4\\sqrt{2} + 4 - 1 = 6 - 4\\sqrt{2} \u003e 0$，所以 $h(t) \u003e 0$ 对 $\\forall t \\in (1,+\\infty)$ 成立。\n所以 $g'(t) \u003e 0$ 对 $\\forall t \\in (1,+\\infty)$ 成立。所以 $g(t)$ 在 $(1,+\\infty)$ 上单调递增。又因为 $g(1) = 1$，所以 $g(t) \u003e 1$ 对 $\\forall t \\in (1,+\\infty)$ 成立。\n所以 $f(x)$ 在 $(0,+\\infty)$ 上单调递增。\n所以对于 $f(n)$ 的最小值在 n = 1 时取得，即 $f(n)_{\\min} = f(1) = \\frac{9\\sqrt{2}-8}{2}$。\n综上所述： $$\rc_{\\max} = \\frac{9\\sqrt{2}-8}{2}\r$$",
+  "wordCount" : "597",
+  "inLanguage": "zh",
+  "datePublished": "2026-04-05T23:56:00+08:00",
+  "dateModified": "2026-04-05T23:56:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "Yaten-Z"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.yaten.xyz/posts/excellent-questions-01/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yaten-Z's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.yaten.xyz/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.yaten.xyz/" accesskey="h" title="Yaten-Z&#39;s Blog (Alt + H)">Yaten-Z&#39;s Blog</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://blog.yaten.xyz/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.yaten.xyz/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.yaten.xyz/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.yaten.xyz/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.yaten.xyz/friend/" title="Friends">
+                    <span>Friends</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://blog.yaten.xyz/">主页</a>&nbsp;»&nbsp;<a href="https://blog.yaten.xyz/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Excellent Questions 01
+    </h1>
+    <div class="post-meta"><span title='2026-04-05 23:56:00 +0800 CST'>四月 5, 2026</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;597 字&nbsp;·&nbsp;Yaten-Z&nbsp;·&nbsp;
+
+</div>
+  </header> <aside id="toc-container" class="toc-container wide">
+<div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e5%8f%99%e8%bf%b0" aria-label="题目叙述">题目叙述</a></li>
+                <li>
+                    <a href="#%e8%a7%a3%e7%ad%94" aria-label="解答">解答</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+
+  <div class="post-content"><h2 id="题目叙述">题目叙述<a hidden class="anchor" aria-hidden="true" href="#题目叙述">#</a></h2>
+<p>已知对于任意正整数 $n$ 和任意实数 $x_1,x_2,...,x_n$，不等式
+</p>
+$$
+(1-\sum^{n}_{k=1}\frac{\sin x_k}{k(k+1)})^2+(1-\sum^{n}_{k=1}\frac{\cos x_k}{k(k+1)})^2 \ge \frac{c}{(n+1)\sqrt{n+1}}
+$$<p>恒成立。求常数 $c$ 的最大可能值。</p>
+<h2 id="解答">解答<a hidden class="anchor" aria-hidden="true" href="#解答">#</a></h2>
+<p>对于 $\forall u,v \in \R$，基本不等式 得
+</p>
+$$
+u^2+v^2 \ge \frac{(u+v)^2}{2}
+$$<p>
+令
+</p>
+$$
+u = 1-\sum^{n}_{k=1}\frac{\sin x_k}{k(k+1)}, v = 1-\sum^{n}_{k=1}\frac{\cos x_k}{k(k+1)}
+$$<p>
+则左边
+</p>
+$$
+\text{LHS} = u^2+v^2 \ge \frac{(u+v)^2}{2} = \frac{1}{2}(2-\sum^{n}_{k=1}\frac{\sin x_k+\cos x_k}{k(k+1)})^2
+$$<p>
+而由于 $\sin x_k + \cos x_k = \sqrt{2}\sin(x_k + \frac{\pi}{4}) \le \sqrt{2}$，因此
+</p>
+$$
+\sum ^{n}_{k=1}\frac{\sin x_k+\cos x_k}{k(k+1)} \le \sqrt{2}\sum^{n}_{k=1}\frac{1}{k(k+1)} = \sqrt{2}(1-\frac{1}{n+1}) = \frac{\sqrt{2}n}{n+1}
+$$<p>
+所以
+</p>
+$$
+\text{LHS} \ge \frac{1}{2}(2-\frac{\sqrt{2}n}{n+1})^2
+$$<p>
+当且仅当 $\sin x_k + \cos x_k = \sqrt{2}$，即 $x_k = \frac{\pi}{4} + 2m\pi$（$m \in \Z$）时等号成立。此时
+</p>
+$$
+\text{LHS}_{\min} = \frac{1}{2}(2-\frac{\sqrt{2}n}{n+1})^2 = (\sqrt{2}-\frac{n}{n+1})^2
+$$<p>
+所以 $\forall n \in \N^+$，恒有
+</p>
+$$
+(\sqrt{2}-\frac{n}{n+1})^2 \ge \frac{c}{(n+1)\sqrt{n+1}}
+$$<p>
+参变分离可以得到
+</p>
+$$
+c \le (n+1)\sqrt{n+1}(\sqrt{2}-\frac{n}{n+1})^2 =  \frac{(\sqrt{2}(n+1)-n)^2}{\sqrt{n+1}}
+$$<p>
+令 $f(x) = \frac{(\sqrt{2}(x+1)-x)^2}{\sqrt{x+1}}$，则
+</p>
+$$
+c_{\max} = \min_{n \in \N^+} f(n)
+$$<p>
+换元，令 $t = \sqrt{x+1} \in (1,+\infty)$，则 $x = t^2 - 1$，所以
+</p>
+$$
+f(x) = g(t) = \frac{(\sqrt{2}t - (t^2 - 1))^2}{t} = \frac{(\sqrt{2}t - t^2 + 1)^2}{t}
+$$<p>
+求导化简得到
+</p>
+$$
+g'(t) = \frac{3t^4-4\sqrt{2}t^3+4t^2-1}{t^2}
+$$<p>
+令 $h(t) = 3t^4 - 4\sqrt{2}t^3 + 4t^2 - 1$，则
+</p>
+$$
+h'(t) = 12t^3 - 12\sqrt{2}t^2 + 8t = 4t(3t^2 - 3\sqrt{2}t + 2)
+$$<p>
+对于 $3t^2 - 3\sqrt{2}t + 2$，其判别式 $\Delta = (-3\sqrt{2})^2 - 4 \cdot 3 \cdot 2 = 18 - 24 = -6 < 0$。
+所以 $3t^2 - 3\sqrt{2}t + 2 > 0$ 对 $\forall t \in \R$ 成立。</p>
+<p>所以 $h'(t) > 0$ 对 $\forall t \in (1,+\infty)$ 成立。从而 $h(t)$ 在 $(1,+\infty)$ 上单调递增。又因为 $h(1) = 3 - 4\sqrt{2} + 4 - 1 = 6 - 4\sqrt{2} > 0$，所以 $h(t) > 0$ 对 $\forall t \in (1,+\infty)$ 成立。</p>
+<p>所以 $g'(t) > 0$ 对 $\forall t \in (1,+\infty)$ 成立。所以 $g(t)$ 在 $(1,+\infty)$ 上单调递增。又因为 $g(1) = 1$，所以 $g(t) > 1$ 对 $\forall t \in (1,+\infty)$ 成立。</p>
+<p>所以 $f(x)$ 在 $(0,+\infty)$ 上单调递增。</p>
+<p>所以对于 $f(n)$ 的最小值在 n = 1 时取得，即 $f(n)_{\min} = f(1) = \frac{9\sqrt{2}-8}{2}$。</p>
+<p>综上所述：
+</p>
+$$
+c_{\max} = \frac{9\sqrt{2}-8}{2}
+$$
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://blog.yaten.xyz/tags/%E6%95%B0%E5%AD%A6/">数学</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://blog.yaten.xyz/posts/question-record-01/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>Question Record 01</span>
+  </a>
+  <a class="next" href="https://blog.yaten.xyz/posts/test-blog/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>Welcome to My Blog</span>
+  </a>
+</nav>
+
+
+
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="Yaten-Z/blog-giscus"
+        data-repo-id="R_kgDOOzg2eg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOzg2es4Cq1Mo"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        data-theme="noborder_light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    <footer class="footer">
+        
+        <span>&copy; 2026 <a href="https://blog.yaten.xyz/">Yaten-Z&#39;s Blog</a></span>
+        <span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            Licensed under
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+              target="_blank"
+              rel="license noopener noreferrer"
+              style="display:inline-block;"
+              >CC BY-NC 4.0 </a
+            ></span
+        > · </body>
+
+</html>
